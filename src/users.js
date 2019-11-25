@@ -27,7 +27,15 @@ class users extends React.Component{
     render(){
         return(
             <div>
-                
+                <tbody>
+                   {this.state.users.map(item =>(
+                        <tr>
+                            <td><img src={item.picture.thumbnail}/></td>
+                            <td>{item.login.username}</td>
+                            <td>{item.login.password}</td>
+                        </tr>
+                   ))}
+                </tbody>
             </div>
         )
     }
